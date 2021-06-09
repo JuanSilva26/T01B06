@@ -1,6 +1,5 @@
 # T01B06: Projeto com magnetómetro MAG3110 com interface I2C
-### Francisco Salgado
-### Juan da Silva
+### Autores: Francisco Salgado, Juan da Silva
 ## Sumário
 * [Introdução](#tag_sec_um)
 * [Montagem e Cicruito](#tag_sec_a)
