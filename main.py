@@ -137,7 +137,7 @@ def read( ):
 	data = i2c.readfrom_mem( addr, OUT_X_MSB, 6 )   #lê os dados com o enredeço X MSB, 6 bits, 2 para cada eixo
 	x = ustruct.unpack( '>h', data[0:2] )[0]        # convert 2 bytes, MSB first to integer, signed 2's complement number
 	y = ustruct.unpack( '>h', data[2:4] )[0]        #converte 2 bytes (primeiro o MSB) 2 por cada eixo 
-	z = ustruct.unpack( '>h', data[4:6] )[0]        #funciona como um 
+	z = ustruct.unpack( '>h', data[4:6] )[0]        
 	return x,y,z
 	
 def step_calibration():
@@ -184,7 +184,7 @@ def exit_calibration():
 	set_offset( OFFSET_X_AXIS, x_offset )
 	set_offset( OFFSET_Y_AXIS, y_offset )
 	# (modo normal) usa os offsets definidos na leitura
-	i2c.writeto_mem( addr, CTRL_REG2, bytes([ AUTO_MRST_EN & (0xFF-(0x01 << 5)) ]) )  #ver coisas
+	i2c.writeto_mem( addr, CTRL_REG2, bytes([ AUTO_MRST_EN ]) )  #ver coisas
 	global calibrationMode
 	calibrationMode = False
 	global calibrated         #atualizar variáveis
@@ -195,7 +195,7 @@ def exit_calibration():
 #	""" Lê o user offset armazenado no mag """
 #	data = [0x00] * 2    #2 bits 0
 #	data = i2c.readfrom_mem( addr, OFFSET_X_AXIS, 2) # lê 2 bytes
-#	x = ustruct.unpack( '>h', data[0:2] )[0] # converte 2 2 bytes, 2 bytes MSB, MSB primeiro a ser integrado, complemento de 2 inteiro 
+#	x = ustruct.unpack( '>h', data[0:2] )[0] # converte 2 bytes, 2 bytes MSB, MSB primeiro a ser integrado
 #	data = i2c.readfrom_mem( addr, OFFSET_Y_AXIS, 2) # lê 2 bytes
 #	y = ustruct.unpack( '>h', data[0:2] )[0]
 #	data = i2c.readfrom_mem( addr, OFFSET_Z_AXIS, 2) # lê 2 bytes
