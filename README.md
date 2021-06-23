@@ -40,7 +40,7 @@
 ##### Montou-se o circuito consoante o seguinte esquema:
 ![](pcr.png)
 
-##### Este componente em específico já vem com as reistências de PULL_UP incorporadas no circuito impresso que se deveria colocar nas saídas I2C (antes dos pins SDA e SCL). O valor das resistências de pull_up dependem das características do clock i2C e da capacidade de armazenamento do barramento i2c, sendo que cada modo de operação do magnetómetro requer um  valor específico de resistência pull_up. Contudo, este dispositivo ja apresenta estas resistências, adequadas quer se use o fast ou o nomal mode
+##### Este componente em específico já vem com as reistências de PULL_UP incorporadas no circuito impresso que se deveria colocar nas saídas I2C (antes dos pins SDA e SCL). O valor das resistências de pull_up dependem das características do clock i2C e da capacidade de armazenamento do barramento i2c, sendo que cada modo de operação do magnetómetro requer um  valor específico de resistência pull_up. Como este dispositivo ja apresenta estas resistências incorporadas, adequadas quer opere em fast ou nomal mode, não é preciso colocá-las no circuito.
 
 ## <a name="tag_sec_c"></a> Transmissão da Informação
 
