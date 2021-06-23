@@ -27,7 +27,7 @@
 ##### Neste projeto iremos utilizar o MAG3110 como uma bússola, programando a leitura de dados brutos magnéticos e apresentando a orientação dos pontos cardeais em relação à posição do dispositivo. O programa premitirá também utilizar o magnetómetro para medir a intensidade do campo magnético e a sua orientação em cada componente. Para isso, estará conetado a um microprocessador ESP32 pelo barramento I2C, que servirá de interface para o programa propriamente dito. A linguagagem de programação utilizada foi o MircoPython, tendo se utilizado a plataforma Visual Studio Code; a ligação ao ESP32 é através de um cabo USB-microUSB.
 
 ## <a name="tag_sec_a"></a> Hardware
-##### O dispostivo consiste numa placa 15x15 mm vermelha com um referencial cartesiano 3D localizado de acordo com a orientação dos sensores magnéticos, sendo que o eixo z representa o eixo transversal à placa. Apresenta também um circuito integrado com vários pinos sendo que apresenta 5 pins estão disponíveis para ligação externa:  
+##### O dispostivo consiste numa placa 15x15 mm vermelha com um referencial cartesiano 3D localizado de acordo com a orientação dos sensores magnéticos, sendo que o eixo z representa o eixo transversal à placa. Apresenta também um circuito integrado com vários pinos sendo que 5 deles estão disponíveis para ligação externa:  
 * #####  VCC: alimentação externa (até 3,6V);
 * #####  GND: ligação à terra;
 * #####  SDA: "Serial data pin" para a ligação I2C; é o pin responsável pela transmissão dos bits de dados;
