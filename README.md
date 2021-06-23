@@ -59,7 +59,7 @@
 ##### É a primeira secção do programa que corre tendo-se utilizado o register WHO_AM_I para recolher o endereço deste modo específico do MAG3110. Funciona como uma confirmação de conexão e identificação do dispositivo.
 
 * #### reset()
-##### Reinicia a biblioteca (limpa a cage dos bits) e inicializa o MAG3110 
+##### Reinicia a biblioteca (limpa a cache dos bits) e inicializa o MAG3110 
 
 * #### set_offset()
 ##### Define um valor inteiro para todos os eixos do Magnetómetro (x,y,z)
